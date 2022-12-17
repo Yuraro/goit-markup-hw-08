@@ -1,15 +1,27 @@
 .about {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .about__uplist {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .about__uplist__list {
-    flex-basis: calc((100% - 90px) / 4);
+    width: 100%;
+    
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 90px) / 4);
+    }
 }
 
 .about__uplist__title {
@@ -19,6 +31,12 @@
     text-transform: uppercase;
     color: var(--title-color);
     margin-bottom: 10px;
+
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
 }
 
 .about__uplist__subtitle {
